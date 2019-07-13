@@ -1,0 +1,25 @@
+﻿<Window x:Class="InstaSlideshow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InstaSlideshow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        WindowStyle="None"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent" MouseDown="Grid_MouseDown" KeyDown="Grid_KeyDown">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding HeadingText}" FontSize="60" Foreground="White" Margin="10" FontWeight="Bold" HorizontalAlignment="Center"/>
+        <Image Grid.Row="1" x:Name="InstaImage" Margin="10" />
+        <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10,10,30,30">
+            <TextBlock Text="{Binding Username}" FontSize="40" FontWeight="Bold" Foreground="White"/>
+        </StackPanel>
+    </Grid>
+</Window>
