@@ -11,6 +11,8 @@ namespace InstaSlideshow
 
         public AppSettings(ILogger logger)
         {
+            _logger = logger;
+
             HeadingText = new Lazy<string>(() => GetSettingValue<string>("HeadingText", "Heading"));
             Hashtag = new Lazy<string>(() => GetSettingValue<string>("Hashtag", "dog"));
             Username = new Lazy<string>(() => GetSettingValue<string>("Username"));
@@ -33,6 +35,13 @@ namespace InstaSlideshow
         public Lazy<int> PagesCount { get; }
 
         public Lazy<DateTime> StartDate { get; }
+
+        public bool Validate()
+        {
+            return !string.IsNullOrEmpty(Username.Value) && 
+                   !string.IsNullOrEmpty(Password.Value) && 
+                   !string.IsNullOrEmpty(Hashtag.Value);
+        }
 
         private T GetSettingValue<T>(string key, T defaultValue = default(T))
         {
