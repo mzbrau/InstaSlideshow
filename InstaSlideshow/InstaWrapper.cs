@@ -68,7 +68,7 @@ namespace InstaSlideshow
                                                           PaginationParameters.MaxPagesToLoad(_settings.PagesCount.Value));
             if (tagFeed.Succeeded)
             {
-                return tagFeed.Value.Medias.Where(x => x.Images != null)
+                var images = tagFeed.Value.Medias.Where(x => x.Images != null)
                     .Where(x => x.Images.Any())
                     .Where(x => x.TakenAt > _settings.StartDate.Value)
                     .Select(s => new InstaImage()
@@ -76,6 +76,29 @@ namespace InstaSlideshow
                             Url = s.Images.First().URI,
                             User = s.User?.FullName ?? "Unknown"
                         }).ToList();
+
+                var carouselMedias = tagFeed.Value.Medias.Where(x => x.Carousel != null && x.Carousel.Any())
+                    .Where(s => s.TakenAt > _settings.StartDate.Value);
+
+                foreach (var media in carouselMedias)
+                {
+                    if (media.TakenAt > _settings.StartDate.Value)
+                    {
+                        foreach (var item in media.Carousel)
+                        {
+                            if (item.Images.Any())
+                            {
+                                images.Add(new InstaImage()
+                                {
+                                    Url = item.Images.First().URI,
+                                    User = media.User?.FullName ?? "Unknown"
+                                });
+                            }
+                        }
+                    }
+                }
+
+                return images;
             }
 
             _logger.Error($"Error when getting pictures for hashtag {tagFeed.Info.Message}");
