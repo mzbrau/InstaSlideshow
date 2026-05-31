@@ -43,7 +43,7 @@ It is ideal for events, trade shows, digital signage, or any scenario where you 
 
 | Component | Technology |
 |---|---|
-| Language | C# (.NET Framework 4.6.1) |
+| Language | C# (.NET Framework 4.8) |
 | UI Framework | Windows Presentation Foundation (WPF) |
 | Instagram API | InstaSharper |
 | Logging | NLog |

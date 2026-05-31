@@ -84,7 +84,7 @@ function HeroBanner() {
         <div className="badge-strip">
           <img
             alt=".NET Framework"
-            src="https://img.shields.io/badge/.NET_Framework-4.6.1-purple?style=flat-square"
+            src="https://img.shields.io/badge/.NET_Framework-4.8-purple?style=flat-square"
           />
           <img
             alt="WPF"

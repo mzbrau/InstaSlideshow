@@ -118,7 +118,7 @@ Alternatively, if the application fails to start because it cannot write `state.
 
 **Symptom:** A Windows error dialog reports a missing `.dll`.
 
-**Fix:** Install the .NET Framework 4.6.1 runtime from the [Microsoft Download Center](https://dotnet.microsoft.com/download/dotnet-framework/net461).
+**Fix:** Install the .NET Framework 4.8 runtime from the [Microsoft Download Center](https://dotnet.microsoft.com/download/dotnet-framework/net48).
 
 ---
 
