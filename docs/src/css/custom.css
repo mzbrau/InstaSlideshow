@@ -1,0 +1,152 @@
+/**
+ * CSS variables and custom styles for InstaSlideshow docs.
+ * Uses an Instagram-inspired purple/pink gradient palette.
+ */
+
+/* Instagram-inspired colour tokens */
+:root {
+  --ifm-color-primary: #c13584;
+  --ifm-color-primary-dark: #ad2f76;
+  --ifm-color-primary-darker: #a32c70;
+  --ifm-color-primary-darkest: #87245c;
+  --ifm-color-primary-light: #d53b92;
+  --ifm-color-primary-lighter: #d94098;
+  --ifm-color-primary-lightest: #e055ac;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Landing-page gradient */
+  --insta-gradient: linear-gradient(
+    135deg,
+    #833ab4 0%,
+    #c13584 40%,
+    #e1306c 70%,
+    #fd1d1d 100%
+  );
+  --insta-gradient-subtle: linear-gradient(
+    135deg,
+    rgba(131, 58, 180, 0.08) 0%,
+    rgba(193, 53, 132, 0.08) 50%,
+    rgba(225, 48, 108, 0.08) 100%
+  );
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #e1306c;
+  --ifm-color-primary-dark: #d0255f;
+  --ifm-color-primary-darker: #c5225a;
+  --ifm-color-primary-darkest: #a21c4a;
+  --ifm-color-primary-light: #e84a7e;
+  --ifm-color-primary-lighter: #eb5486;
+  --ifm-color-primary-lightest: #f07099;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* ─── Hero Section ─── */
+.hero--insta {
+  background: var(--insta-gradient);
+  color: #fff;
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero--insta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.hero--insta .hero__title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.hero--insta .hero__subtitle {
+  font-size: 1.35rem;
+  opacity: 0.9;
+  max-width: 560px;
+  margin: 1rem auto 0;
+}
+
+/* ─── Feature Cards ─── */
+.features {
+  padding: 4rem 0;
+  background: var(--insta-gradient-subtle);
+}
+
+.feature-card {
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-background-surface-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(193, 53, 132, 0.15);
+}
+
+.feature-card__icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.feature-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
+/* ─── Buttons ─── */
+.button--insta-primary {
+  background: var(--insta-gradient);
+  border: none;
+  color: #fff !important;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.button--insta-primary:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+.button--insta-outline {
+  border: 2px solid #fff;
+  color: #fff !important;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.button--insta-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ─── Badge strip ─── */
+.badge-strip {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* ─── Misc ─── */
+.navbar__brand {
+  font-weight: 800;
+}

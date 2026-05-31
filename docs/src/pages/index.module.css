@@ -1,0 +1,62 @@
+/* index.module.css — scoped styles for the landing page */
+
+.heroBanner {
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroLogo {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.3));
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.sectionHeading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+}
+
+.featureCol {
+  margin-bottom: 1.5rem;
+}
+
+/* Quick-start section */
+.quickStart {
+  padding: 4rem 0;
+}
+
+.stepCol {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.stepNumber {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--insta-gradient);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 16px rgba(193, 53, 132, 0.3);
+}
+
+.quickStartCta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
