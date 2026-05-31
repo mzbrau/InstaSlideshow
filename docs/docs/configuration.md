@@ -160,7 +160,7 @@ Posts taken **before** this date are excluded from the slideshow. Set this to th
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <startup>
-    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8" />
   </startup>
   <appSettings>
     <add key="HeadingText"       value="#TechConf2025"/>

@@ -17,7 +17,7 @@ This guide walks you through everything you need to get InstaSlideshow running o
 | Requirement | Minimum version |
 |---|---|
 | Windows OS | Windows 7 SP1 or later |
-| .NET Framework | 4.6.1 |
+| .NET Framework | 4.8 |
 | Instagram account | A valid Instagram username and password |
 | Privileges | Administrator rights are required only when running from a protected directory (e.g. `C:\Program Files\`) |
 
