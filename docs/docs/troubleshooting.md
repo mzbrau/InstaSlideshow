@@ -14,10 +14,10 @@ This page covers the most common problems encountered when running InstaSlidesho
 
 ## Checking the log file
 
-InstaSlideshow uses **NLog** for diagnostic logging. The log file is located beside the executable:
+InstaSlideshow uses **NLog** for diagnostic logging. The log file is written to:
 
 ```
-C:\Program Files\InstaSlideshow\logs\InstaSlideshow.log
+C:\ProgramData\InstaSlideshow\instaslideshow.log
 ```
 
 Check this file first whenever something goes wrong — it almost always contains the root cause.
@@ -82,16 +82,12 @@ Check this file first whenever something goes wrong — it almost always contain
 
 **Symptom:** The window appears but does not cover the taskbar or is not maximised.
 
-**Fix:** Ensure the application is launched as **Administrator**:
+**Fix:** To hide the taskbar, enable **auto-hide** in Windows taskbar settings:
 
-1. Right-click `InstaSlideshow.exe`.
-2. Select **Run as administrator**.
+1. Right-click the taskbar and select **Taskbar settings**.
+2. Enable **Automatically hide the taskbar in desktop mode**.
 
-Alternatively, set the compatibility option permanently:
-
-1. Right-click `InstaSlideshow.exe` → **Properties**.
-2. Go to the **Compatibility** tab.
-3. Check **Run this program as an administrator**.
+Alternatively, if the application fails to start because it cannot write `state.bin`, try running as Administrator (required when installed under `C:\Program Files\`).
 
 ---
 

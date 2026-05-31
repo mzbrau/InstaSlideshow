@@ -19,10 +19,10 @@ This guide walks you through everything you need to get InstaSlideshow running o
 | Windows OS | Windows 7 SP1 or later |
 | .NET Framework | 4.6.1 |
 | Instagram account | A valid Instagram username and password |
-| Privileges | The application must be run as **Administrator** |
+| Privileges | Administrator rights are required only when running from a protected directory (e.g. `C:\Program Files\`) |
 
 :::caution Administrator rights
-InstaSlideshow requires Administrator privileges so that the full-screen borderless window can appear above the Windows taskbar.
+InstaSlideshow saves a session file (`state.bin`) beside the executable. When installed under `C:\Program Files\`, Administrator privileges are required to write this file. Source builds to a user-writable folder do not need elevation.
 :::
 
 ---
@@ -91,7 +91,7 @@ See the [Configuration Reference](./configuration) for a detailed description of
 
 ## Running the application
 
-1. Right-click `InstaSlideshow.exe` and choose **Run as administrator**.
+1. If running from a protected install directory (e.g. `C:\Program Files\`), right-click `InstaSlideshow.exe` and choose **Run as administrator**; otherwise double-click to launch normally.
 2. The application authenticates with Instagram — this may take a few seconds.
 3. Once logged in, the slideshow starts automatically in full-screen mode.
 

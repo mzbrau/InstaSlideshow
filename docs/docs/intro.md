@@ -4,7 +4,6 @@ title: Introduction
 sidebar_label: Introduction
 sidebar_position: 1
 description: An overview of InstaSlideshow — a C# WPF application that turns any screen into a live Instagram hashtag slideshow.
-slug: /intro
 ---
 
 # InstaSlideshow

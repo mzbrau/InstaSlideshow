@@ -169,7 +169,7 @@ MainWindow → Image.ChangeSource()  →  cross-fade on screen
 
 ## Logging
 
-NLog is configured via `NLog.config` (beside the executable). By default, logs are written to a rolling file and the debug output window. Log messages are emitted at key points:
+NLog is configured via `NLog.config` (beside the executable). By default, logs are written to `C:\ProgramData\InstaSlideshow\instaslideshow.log`. Log messages are emitted at key points:
 
 | Level | When |
 |---|---|

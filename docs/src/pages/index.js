@@ -150,8 +150,9 @@ export default function Home() {
                 <div className={styles.stepNumber}>3</div>
                 <h3>Run</h3>
                 <p>
-                  Launch as Administrator and enjoy a live, full-screen Instagram
-                  hashtag slideshow.
+                  Launch the application (as Administrator if installed under{' '}
+                  <code>C:\Program Files\</code>) and enjoy a live, full-screen
+                  Instagram hashtag slideshow.
                 </p>
               </div>
             </div>
